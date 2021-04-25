@@ -1,0 +1,28 @@
+---
+train:
+  params:
+    batch_size: 64
+    epoch: 40
+    lr: 0.0001
+    decay: 1
+    decay_step: 70000
+    loss: MSELoss
+  save:
+    save_path: "/home/cyh/GazeBenchmark/exp/Implementation/RT-Net"
+    model_name: RT
+    step: 5
+  data:
+    image: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Image"
+    label: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Label"
+  pretrains: "None"
+test:
+   load:
+      begin_step: 5
+      end_step: 40
+      steps: 5
+      load_path: "/home/cyh/GazeBenchmark/exp/Implementation/RT-Net"
+      model_name: RT
+   data:
+      image: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Image"
+      label: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Label"
+reader: reader_mpii

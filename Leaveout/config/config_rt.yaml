@@ -1,0 +1,28 @@
+---
+train:
+  params:
+    batch_size: 64
+    epoch: 50
+    lr: 0.0001
+    decay: 1
+    decay_step: 70000
+    loss: MSELoss
+  save:
+    save_path: "/home/cyh/GazeBenchmark/exp/Implementation/RT-Net"
+    model_name: RT
+    step: 10
+  data:
+    image: "/home/cyh/GazeDataset20200519/Original/Rt-Gene"
+    label: "/home/cyh/GazeDataset20200519/FaceBased/RT-Gene/Label/train"
+  pretrains: "None"
+test:
+   load:
+      begin_step: 10
+      end_step: 50
+      steps: 10
+      load_path: "/home/cyh/GazeBenchmark/exp/Implementation/RT-Net"
+      model_name: RT
+   data:
+      image: "/home/cyh/GazeDataset20200519/Original/Rt-Gene"
+      label: "/home/cyh/GazeDataset20200519/FaceBased/RT-Gene/Label-glasses/train"
+reader: reader_rt
