@@ -74,7 +74,7 @@ In the traintest folder, you can run
 python train.py config/config_mpii.yaml
 ```
 
-### Testing
+### Test
 In the leaveout folder, you can run
 ```
 python test.py config/config_mpii.yaml 0
