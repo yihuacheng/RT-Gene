@@ -1,6 +1,6 @@
 # RT-Gene
 
-The Pytorch Implementation of "RT-GENE: Real-Time Eye Gaze Estimation in Natural Environments". (updated in 2021/04/25)
+The Pytorch Implementation of "RT-GENE: Real-Time Eye Gaze Estimation in Natural Environments". (updated in 2021/04/28)
 
 We build benchmarks for gaze estimation in our survey [**"Appearance-based Gaze Estimation With Deep Learning: A Review and Benchmark"**](https://arxiv.org/abs/2104.12668).
 This is the implemented code of "Full-face" methods in our benchmark. Please refer our survey for more details.
